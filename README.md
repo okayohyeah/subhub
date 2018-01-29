@@ -26,22 +26,30 @@ Here's my package install as of 02 Jan 2018:
 <code>create-react-app my-hybrid-app && cd my-hybrid-app</code>
 
 * create-react-app installs react@^16.2.0 react-dom@^16.2.0 as of 02 Jan 2018.
-We need to downgrade to satisfy react-native's "absolute version" requirement: react@16.0.0.
-npm uninstall --save
-<code>yarn remove react react-dom</code>
+  * We need to downgrade to satisfy react-native's "absolute version" requirement: react@16.0.0.
+  * npm uninstall --save
+    - ```
+      yarn remove react react-dom
+      ```
 
 * npm install --save-dev
-<code>yarn add --dev babel-plugin-transform-object-rest-spread babel-plugin-transform-react-jsx-source babel-preset-expo jest-expo flow-bin react-native-scripts react-test-renderer@16.0.0</code>
+  * ```
+    yarn add --dev babel-plugin-transform-object-rest-spread babel-plugin-transform-react-jsx-source babel-preset-expo jest-expo flow-bin react-native-scripts react-test-renderer@16.0.0
+    ```
 
 * npm install --save
-<code>yarn add expo@^23.0.4 react@16.0.0 react-dom@16.0.0 react-native@0.50.3 react-native-web</code>
+  * ```
+    yarn add expo@^23.0.4 react@16.0.0 react-dom@16.0.0 react-native@0.50.3 react-native-web
+    ```
 The rest of the steps is more or less the same. I generated the latest create-react-native-app code, then copied the files from there, as the tutorial says.
 
 * Copy these from the latest create-react-native-app:
 
-.babelrc
-.flowconfig       important! code was updated recently 
-.watchmanconfig
-app.json          important! code was updated recently
-App.js
-App.test.js 
+  * .babelrc
+  * .flowconfig       
+    - important! code was updated recently 
+  * .watchmanconfig
+  * app.json          
+    - important! code was updated recently
+  * App.js
+  * App.test.js 
