@@ -17,9 +17,11 @@ A place for substitute teachers to track and organize assignments.
     yarn ios
     ```
 
-### Write code in React Native code
-This Hybrid App runs on the Web, iOS and Android
+## Write code in React Native code
+## This Hybrid App runs on the Web, iOS and Android
+
 ---
+
 ### Source:
 [Write once, run anywhere with Create React (Native) App and react-native-web by @Yannick Spark](https://sparkyspace.com/write-once-run-anywhere-with-create-react-native-app-and-react-native-web/#comment-3688417951)
 ---
