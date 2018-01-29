@@ -9,17 +9,22 @@ A place for substitute teachers to track and organize assignments.
 ## Development
 * Have Xcode installed on Mac and Expo downloaded on Phone
 * In Terminal 1: Web App
-<code>yarn start-web </code>
+  * ```
+    yarn start-web
+    ```
 * In Terminal 2: Mobile App
-<code>yarn ios</code>
+  * ```
+    yarn ios
+    ```
 
 ### Write code in React Native code
 This Hybrid App runs on the Web, iOS and Android
-
+---
+### Source:
 [Write once, run anywhere with Create React (Native) App and react-native-web by @Yannick Spark](https://sparkyspace.com/write-once-run-anywhere-with-create-react-native-app-and-react-native-web/#comment-3688417951)
-
+---
 #### Notes:
-* From comments by "KajiTetsushi":
+##### From comments by "KajiTetsushi":
 
 Here's my package install as of 02 Jan 2018:
 
