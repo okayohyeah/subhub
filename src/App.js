@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import logo from './logo.svg';
-import './App.css';
+import { Image, View, Text, StyleSheet } from 'react-native';
 
 export default class App extends Component {
   render() {
     return (
        <View style={styles.app}>
         <View style={styles.appHeader}>
-          <Text style={styles.appTitle}><img src={logo} className="App-logo" alt="logo" /> Subhub <img src={logo} className="App-logo" alt="logo" /></Text>
+          <Text style={styles.appTitle}><Image source={ require('./pencil1.png')} style={{ width: 50, height:50, resizeMode: Image.resizeMode.contain,}} />Subhub<Image source={ require('./pencil2.png')} style={{ width: 50, height:50, resizeMode: Image.resizeMode.contain,}} /> </Text>
         </View>
         <Text style={styles.appIntro}>
-          The center for subs
+          The hub for subs
         </Text>
       </View>
     );
@@ -30,12 +28,13 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   appTitle: {
-    fontSize: 100,
+    fontSize: 50,
     color: 'white'
   },
   appIntro: {
     flex: 2,
     fontSize: 30,
+    padding: 30,
     textAlign: 'center'
   }
 })
