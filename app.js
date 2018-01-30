@@ -6,7 +6,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-  res.json({ message: 'API Example App' });
+  res.json({message: 'API Example App'});
 });
 
-module.export = app;
+module.exports = app;
