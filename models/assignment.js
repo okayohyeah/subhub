@@ -1,11 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Assignment = sequelize.define('Assignment', {
-    school: DataTypes.STRING,
+    schoo: DataTypes.STRING,
     teacher: DataTypes.STRING,
     grade: DataTypes.INTEGER,
     date: DataTypes.DATE,
-    rating: DataTypes.STRING,
+    rating: DataTypes.INTEGER,
     notes: DataTypes.TEXT
   }, {
     classMethods: {

@@ -1,7 +1,7 @@
 {
   "name": "Subhub",
   "version": "1.0.0",
-  "description": "Subhub back-end",
+  "description": "Subhub backend",
   "main": "index.js",
   "author": "Katherine Oh",
   "license": "MIT",
@@ -12,13 +12,13 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-validator": "^4.3.0",
-    "nodemon": "^1.14.11",
     "pg": "6.1.5",
     "sequelize": "3.30.4",
     "sequelize-cli": "^3.2.0"
   },
   "devDependencies": {
-    "babel-jest": "^21.2.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.1.0",
     "jest": "^22.1.4",
     "sequelize-mock": "^0.10.2",
     "supertest": "^3.0.0"

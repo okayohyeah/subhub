@@ -1,6 +1,6 @@
 {
   "development": {
-    "username": "null",
+    "username": null,
     "password": null,
     "database": "subhub_dev",
     "host": "127.0.0.1",
