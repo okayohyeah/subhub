@@ -64,3 +64,97 @@ it('Validates school when creating assignment', () => {
     })
 })
 
+// ** assignments - TEACHER ** VALIDATE POST
+it('Validates teacher when creating assignment', () => {
+  return request(app)
+    .post('/assignments')
+    .send({
+      school: 'Juniper Elementary School',
+      grade: 4,
+      date: '2018-03-14T00:00:00.000Z', 
+      rating: 4,
+      notes: 'Great administration. Lesson plans provided. Kids good for the most part.'
+    })
+    .then(response => {
+      expect(response.statusCode).toBe(400)
+      const error = response.body.errors.validations[0]
+      expect(error.param).toBe('teacher')
+      expect(error.msg).toBe('Is required')
+    })
+})
+
+// ** assignments - GRADE ** VALIDATE POST
+it('Validates grade when creating assignment', () => {
+  return request(app)
+    .post('/assignments')
+    .send({
+      school: 'Juniper Elementary School',
+      teacher: 'Sam Silas',
+      date: '2018-03-14T00:00:00.000Z', 
+      rating: 4,
+      notes: 'Great administration. Lesson plans provided. Kids good for the most part.'
+    })
+    .then(response => {
+      expect(response.statusCode).toBe(400)
+      const error = response.body.errors.validations[0]
+      expect(error.param).toBe('grade')
+      expect(error.msg).toBe('Is required')
+    })
+})
+
+// ** assignments - DATE ** VALIDATE POST
+it('Validates grade when creating assignment', () => {
+  return request(app)
+    .post('/assignments')
+    .send({
+      school: 'Juniper Elementary School',
+      teacher: 'Sam Silas',
+      grade: 4,
+      rating: 4,
+      notes: 'Great administration. Lesson plans provided. Kids good for the most part.'
+    })
+    .then(response => {
+      expect(response.statusCode).toBe(400)
+      const error = response.body.errors.validations[0]
+      expect(error.param).toBe('date')
+      expect(error.msg).toBe('Is required')
+    })
+})
+
+// ** assignments - RATING ** VALIDATE POST
+it('Validates rating when creating assignment', () => {
+  return request(app)
+    .post('/assignments')
+    .send({
+      school: 'Juniper Elementary School',
+      teacher: 'Sam Silas',
+      grade: 4,
+      date: '2018-03-14T00:00:00.000Z',
+      notes: 'Great administration. Lesson plans provided. Kids good for the most part.'
+    })
+    .then(response => {
+      expect(response.statusCode).toBe(400)
+      const error = response.body.errors.validations[0]
+      expect(error.param).toBe('rating')
+      expect(error.msg).toBe('Is required')
+    })
+})
+
+// ** assignments - NOTES ** VALIDATE POST
+it('Validates notes when creating assignment', () => {
+  return request(app)
+    .post('/assignments')
+    .send({
+      school: 'Juniper Elementary School',
+      teacher: 'Sam Silas',
+      grade: 4,
+      date: '2018-03-14T00:00:00.000Z',
+      rating: 4
+    })
+    .then(response => {
+      expect(response.statusCode).toBe(400)
+      const error = response.body.errors.validations[0]
+      expect(error.param).toBe('notes')
+      expect(error.msg).toBe('Is required')
+    })
+})
