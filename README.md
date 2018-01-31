@@ -10,6 +10,8 @@ A place for substitute teachers to track and organize assignments.
 * React
 * React Native
 * React Native Web
+* JavaScript
+* Node
 * Watchman
 * Expo
 * Jest
