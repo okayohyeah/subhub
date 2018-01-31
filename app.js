@@ -22,13 +22,13 @@ app.get('/assignments', (req, res) => {
 // **assignments ** POST ** ROUTE 
 app.post('/assignments', (req, res) => {
   Assignment.create({
-    school: req.body.assignment.school,
-    teacher: req.body.assignment.teacher,
-    grade: req.body.assignment.grade,
-    date: req.body.assignment.date,
-    rating: req.body.assignment.rating,
-    notes: req.body.assignment.notes
-  }).then((assignment)=> {
+    school: req.body.school,
+    teacher: req.body.teacher,
+    grade: req.body.grade,
+    date: req.body.date,
+    rating: req.body.rating,
+    notes: req.body.notes
+  }).then((assignment) => {
     res.status(201)
     res.json({assignment: assignment})
   })

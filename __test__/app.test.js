@@ -28,20 +28,20 @@ it('Creates assignments', ()=> {
     .post('/assignments')
     .send({
       school: 'Juniper Elementary School',
-      teacher: 'Mark Vizio',
-      grade: 5,
-      date: '2018-03-14T00:00:00.000Z',
-      rating: 2,
-      notes: 'Duty all day. No clear lesson plans. Some kids helpful but majority not.'
+      teacher: 'Sam Silas',
+      grade: 4,
+      date: '2018-03-14T00:00:00.000Z', 
+      rating: 4,
+      notes: 'Great administration. Lesson plans provided. Kids good for the most part.'
     })
     .then(response => {
       expect(response.statusCode).toBe(201)
       expect(response.body.assignment.school).toBe('Juniper Elementary School')
-      expect(response.body.assignment.teacher).toBe('Mark Vizio')
-      expect(response.body.assignment.grade).toBe(5)
-      expect(response.body.assignment.date).toBe('2018-03-14T00:00:00.000Z')
-      expect(response.body.assignment.rating).toBe(2)
-      expect(response.body.assignment.notes).toBe('Duty all day. No clear lesson plans. Some kids helpful but majority not.')
+      expect(response.body.assignment.teacher).toBe('Sam Silas')
+      expect(response.body.assignment.grade).toBe(4),
+      expect(response.body.assignment.date).toBe('2018-03-14T00:00:00.000Z'),
+      expect(response.body.assignment.rating).toBe(4),
+      expect(response.body.assignment.notes).toBe('Great administration. Lesson plans provided. Kids good for the most part.')
     })
 })
 
