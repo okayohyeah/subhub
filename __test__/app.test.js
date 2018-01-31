@@ -45,3 +45,22 @@ it('Creates assignments', ()=> {
     })
 })
 
+// ** assignments - SCHOOL ** VALIDATE POST
+it('Validates school when creating assignment', () => {
+  return request(app)
+    .post('/assignments')
+    .send({
+      teacher: 'Sam Silas',
+      grade: 4,
+      date: '2018-03-14T00:00:00.000Z', 
+      rating: 4,
+      notes: 'Great administration. Lesson plans provided. Kids good for the most part.'
+    })
+    .then(response => {
+      expect(response.statusCode).toBe(400)
+      const error = response.body.errors.validations[0]
+      expect(error.param).toBe('school')
+      expect(error.msg).toBe('Is required')
+    })
+})
+
