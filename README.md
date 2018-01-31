@@ -6,7 +6,17 @@ A place for substitute teachers to track and organize assignments.
 * A way to filter past assignments quickly because once assignments are posted, one has to decide immediately. 
 * This app offsets the time pressure.
 
-## Development
+## Technologies Used:
+* React
+* React Native
+* React Native Web
+* Watchman
+* Expo
+* Jest
+
+## Front-End - In Development
+
+### Development Notes
 * Have Xcode installed on Mac and Expo downloaded on Phone
 * In Terminal 1: Web App
   * ```
